@@ -135,7 +135,7 @@ for e in [mpz(3), mpz(65537)]:
             with open(pem_name, "wb") as pem_out:
                 public_key = der2pem(pkcs1_pubkey).encode('ascii')
                 pem_out.write(public_key)
-                print("[+] Written to {pem_name}")
+                print(f"[+] Written to {pem_name}")
                 jwts.append(forge_mac(jwt0, public_key))
 
 print("="*80)
